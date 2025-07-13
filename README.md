@@ -1,3 +1,4 @@
+<img src="https://img.shields.io/badge/Open_source-Free-blue">
 <img width="973" height="247" alt="BlitZlog" src="https://github.com/user-attachments/assets/37e6c5fc-e686-40df-a3bb-653e02c98aa9" />
 
 # 概要
