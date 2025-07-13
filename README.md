@@ -1,4 +1,4 @@
-![BlitZlog ロゴ](https://github.com/user-attachments/assets/c06cf940-fe6c-48a3-9259-9684dfc7d2a1)
+<img width="973" height="247" alt="BlitZlog" src="https://github.com/user-attachments/assets/37e6c5fc-e686-40df-a3bb-653e02c98aa9" />
 
 # 概要
 BlitZlogは、PHPで作ったブログで、<br>
