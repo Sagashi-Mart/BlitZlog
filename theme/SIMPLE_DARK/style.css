@@ -1,0 +1,928 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    background-color: #181818;
+    /* 深いダークグレー */
+    color: #eeeeee;
+    /* 目に優しいホワイト */
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #1e90ff;
+    /* アクセントのブルー */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    min-height: calc(84.75% - 80px);
+}
+
+.rss-feed {
+    font-weight: bold;
+    color: #ff6421;
+    height: 15px;
+    font-size: 17px;
+}
+
+.rss-feed:hover {
+    color: orangered;
+}
+
+.rss-feed:active {
+    color: red;
+}
+
+.rss-feed img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 17px;
+    height: 17px;
+}
+
+.rss-feed span {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+header {
+    background-color: #121212;
+    border-bottom: 1px solid #333333;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-navigation ul li {
+    margin: 0 15px;
+}
+
+.main-navigation ul li a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ナビゲーションバー */
+.menu {
+    background-color: #121212;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* ナビゲーションバー */
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-list > li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.menu-list > li > a {
+    text-decoration: none;
+    color: #eeeeee;
+    /* 白っぽい色で暗い背景に映える */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* メニュー項目のホバー */
+.menu-list > li > a:hover {
+    color: #1e90ff;
+    /* 明るいブルーでアクセント */
+}
+
+.has-submenu {
+    position: relative;
+    /* サブメニューの基準点 */
+}
+
+/* サブメニュー */
+.submenu {
+    width: 300px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222222;
+    /* 暗めの背景色 */
+    border: 1px solid #333333;
+    /* サブメニューの枠 */
+    border-radius: 4px;
+    /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    /* ソフトな影 */
+    white-space: nowrap;
+}
+
+.submenu li {
+    padding: 5px 20px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #eeeeee;
+    /* 明るいテキスト */
+}
+
+.submenu li a:hover {
+    color: #1e90ff;
+    /* サブメニュー項目のホバーも明るいブルー */
+}
+
+@media(max-width: 768px) {
+    .menu-list {
+        display: flex;
+        /* スマホ用スタイル */
+        flex-direction: column;
+        /* 縦並び */
+    }
+
+    .submenu {
+        position: static;
+        /* デフォルト位置に配置 */
+        display: none;
+        /* 初期は非表示 */
+        width: 200px;
+    }
+
+    .has-submenu:hover .submenu,
+    .has-submenu:focus-within .submenu {
+        display: block;
+        /* モバイルでもホバーかフォーカスで表示 */
+    }
+}
+
+/* ホバー時のサブメニュー表示 */
+.menu-list > li:hover .submenu {
+    display: block;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* メニューリストの右端に配置 */
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    background-color: #222222;
+    color: #eeeeee;
+    font-size: 14px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #187bcd;
+}
+
+.site-footer {
+    background-color: #121212;
+    color: #eeeeee;
+    padding: 20px 0;
+    text-align: center;
+    position: static;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1e90ff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 15px;
+    /* 各ソーシャルアイコンの間隔 */
+}
+
+.social-links li a {
+    text-decoration: none;
+    color: #1e90ff;
+    /* アイコンとリンクの基本色 */
+    font-size: 16px;
+    /* テキストのサイズ */
+    display: flex;
+    align-items: center;
+}
+
+.social-links li a i {
+    margin-right: 8px;
+    /* アイコンとテキストの間隔 */
+    font-size: 24px;
+    /* アイコンのサイズ */
+}
+
+.social-links li a:hover {
+    color: #187bcd;
+    /* ホバー時の色変更 */
+}
+
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: #121212;
+    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.offcanvas-menu.active {
+    left: 0;
+}
+
+/* PC表示メニュー */
+.main-navigation {
+    display: none;
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* スマホ用 */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-navigation {
+        display: none;
+    }
+
+    .thumbnail {
+        width: 100%;
+    }
+}
+
+/* PC用 */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-navigation {
+        display: flex;
+    }
+    
+    .thumbnail {
+        width: 40%;
+    }
+}
+
+.offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: #ffffff;
+}
+
+.menu-close {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-list li a:hover {
+    background-color: #1c1c1c;
+}
+
+.menu-list-sp {
+    list-style: none;
+    display: block;
+}
+
+.menu-list-sp > li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.menu-list-sp > li > a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.admin-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+}
+
+.article-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+}
+
+.card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #eeeeee;
+    margin: 0 0 8px;
+}
+
+.card-excerpt {
+    font-size: 14px;
+    color: #aaaaaa;
+    margin: 0 0 12px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    color: #187bcd;
+}
+
+@media (max-width: 768px) {
+
+    .article-card,
+    .admin-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .article-card {
+        display: inline-block;
+        width: 300px;
+        margin: 16px;
+    }
+
+    .admin-card {
+        width: 97.5%;
+        margin: 16px;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #1e90ff;
+    /* リンクの色 */
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pagination a.active {
+    background-color: #1e90ff;
+    /* アクティブなページの背景色 */
+    color: #ffffff;
+    /* アクティブなリンクの文字色 */
+    pointer-events: none;
+}
+
+.pagination a:hover {
+    background-color: #187bcd;
+    /* ホバー時の背景色 */
+    color: #ffffff;
+    /* ホバー時の文字色 */
+}
+
+body:has(.content:only-child) .site-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 検索フォーム */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 50%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    /* 暗い背景 */
+    color: #f1f1f1;
+    /* 明るい文字色 */
+}
+
+input,
+select,
+textarea,
+#file-upload-btn {
+    width: 300px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    /* 暗い背景 */
+    color: #f1f1f1;
+    /* 明るい文字色 */
+}
+
+.search-input::placeholder {
+    color: #888;
+    /* プレースホルダーの色 */
+}
+
+.search-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    /* 明るいボタン文字色 */
+    background-color: #444;
+    /* 暗めのボタン */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #666;
+    /* ホバー時のカラー */
+}
+
+.btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background-color: #00a6ff;
+}
+
+.btn.primary:hover {
+    background-color: #0080ff;
+}
+
+.btn.success {
+    background-color: #00ff26;
+    color: #000;
+}
+
+.btn.success:hover {
+    background-color: #03cc00;
+}
+
+.btn.danger {
+    background-color: #ff4d00;
+}
+
+.btn.danger:hover {
+    background-color: #ff0000;
+}
+
+.btn.warning {
+    background-color: #fff200;
+    color: #000;
+}
+
+.btn.warning:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.btn.purple {
+    background-color: #cc00ff;
+}
+
+.btn.purple:hover {
+    background-color: #8c00ff;
+}
+
+.btn.secondary {
+    background-color: #c4c4c4;
+    color: #000;
+}
+
+.btn.secondary:hover {
+    background-color: #959595;
+    color: #000;
+}
+
+.btn.light {
+    background-color: #e8e8e8;
+    color: #000;
+}
+
+.btn.light:hover {
+    background-color: #cbcaca;
+    color: #000;
+}
+
+.btn.dark {
+    background-color: #7c7c7c;
+}
+
+.btn.dark:hover {
+    background-color: #3d3d3d;
+}
+
+.alert {
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 0.5rem;
+}
+
+.alert.primary {
+    background-color: #00a6ff;
+    border: solid 2px #0080ff;
+}
+
+.alert.info {
+    background-color: #6df5ff;
+    border: solid 2px #00b7ff;
+}
+
+.alert.success {
+    background-color: #00ff26;
+    border: solid 2px #03cc00;
+    color: #000;
+}
+
+.alert.danger {
+    background-color: #ff6421;
+    border: solid 2px #ff4444;
+    color: white;
+}
+
+.alert.warning {
+    background-color: #fff200;
+    border: solid 2px #ffcc00;
+    color: #000;
+}
+
+.alert.purple {
+    background-color: #cc00ff;
+    border: solid 2px #8c00ff;
+    color: white;
+}
+
+.alert.secondary {
+    background-color: #c4c4c4;
+    border: solid 2px #959595;
+    color: #000;
+}
+
+.alert.light {
+    background-color: #e8e8e8;
+    border: solid 2px #cbcaca;
+    color: #000;
+}
+
+.alert.dark {
+    background-color: #7c7c7c;
+    border: solid 2px #3d3d3d;
+}
+
+/* パンくずリスト（ダークテーマ） */
+.breadcrumb {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: #1e1e1e;
+    /* 暗い背景色 */
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.breadcrumb li {
+    color: #e0e0e0;
+    /* 明るめのテキスト色 */
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #bb86fc;
+    /* パープルリンク */
+}
+
+.breadcrumb li a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    /* ホバーカラー：白 */
+}
+
+.breadcrumb li:last-child {
+    font-weight: bold;
+    color: #aaaaaa;
+    /* 現在のページ：ライトグレー */
+    pointer-events: none;
+}
+
+/* SIMPLE_DARKテーマ */
+#toc {
+    background-color: #333333;
+    /* ダークグレーの背景 */
+    border: 1px solid #444444;
+    /* より濃い灰色の枠線 */
+    border-radius: 10px;
+    /* 角を丸く */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    /* ダークテーマに合う影 */
+    color: #f5f5f5;
+    /* テキストの明るい色 */
+}
+
+/* ulの基本スタイル */
+#toc ul {
+    list-style-type: none;
+    /* 箇条書きマークを削除 */
+    padding-left: 20px;
+    /* インデント */
+    margin: 10px 0;
+}
+
+/* liの基本スタイル */
+#toc li {
+    margin: 5px 0;
+}
+
+/* ネストされたulのスタイル */
+#toc ul ul {
+    margin-left: 15px;
+    /* インデント追加 */
+    border-left: 2px solid #555555;
+    /* ネスト部分の区切り線 */
+    padding-left: 10px;
+}
+
+/* リンクスタイル */
+#toc a {
+    text-decoration: none;
+    /* 下線を削除 */
+    color: #ffc107;
+    /* 暖かみのある黄色 */
+    transition: color 0.2s, transform 0.2s;
+    /* ホバー効果を追加 */
+}
+
+#toc a:hover {
+    color: #ffdd57;
+    /* ホバー時に明るい黄色へ */
+    transform: translateX(5px);
+    /* 右にスライド */
+}
+
+.tab-1 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+.tab-1 > label {
+    flex: 1 1;
+    order: -1;
+    min-width: 70px;
+    padding: .7em 1em .5em;
+    border-bottom: 1px solid #333333;
+    border-radius: 25px;
+    background-color: #242525;
+    color: #e6e6e6;
+    font-size: .9em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tab-1 > label:hover {
+    opacity: .5;
+}
+
+.tab-1 input[name="tab-1"] {
+    display: none;
+}
+
+.tab-1 > div {
+    display: none;
+    width: 100%;
+    padding: 1.5em 1em;
+    background-color: #1b1b1b;
+    border-radius: 25px;
+}
+
+.tab-1 label:has(:checked) {
+    background-color: #1b1b1b;
+    border-color: #12796d #333333 #000000;
+    border-style: solid;
+    border-width: 4px 1px 1px;
+    border-radius: 25px;
+    color: #595959;
+}
+
+.tab-1 label:has(:checked)+div {
+    display: block;
+}
+
+.popup-background {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.popup {
+    --height: 80%;
+    --width: 80%;
+    z-index: 101;
+    position: fixed;
+    top: calc(50vh - calc(var(--height) / 2));
+    left: calc(50vw - calc(var(--width) / 2));
+    height: var(--height);
+    width: var(--width);
+    overflow: hidden;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 2px #000;
+    color: #eee;
+}
+
+.popup > .close-button {
+    --size: 20px;
+    position: absolute;
+    top: calc(var(--size) / 4);
+    right: 5px;
+    height: var(--size);
+    width: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #ccc;
+    font-size: var(--size);
+    border-radius: calc(var(--size) / 5);
+}
+
+.popup > .close-button:hover {
+    background-color: #d00;
+    color : white;
+}
+
+.popup > .popup-content {
+    padding: 10px;
+    text-align: center;
+    color: #ddd;
+}
+
+.popup-flag {
+    display: none;
+}
+
+.popup-flag:not(:checked) + .popup-background {
+    display: none;
+}
+
+.popup-flag:not(:checked) + * + .popup {
+    display: none;
+}
