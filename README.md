@@ -1,45 +1,6 @@
-<img src="https://img.shields.io/badge/Open_source-Free-blue">
-<img width="973" height="247" alt="BlitZlog" src="https://github.com/user-attachments/assets/37e6c5fc-e686-40df-a3bb-653e02c98aa9" />
+<img src="https://img.shields.io/badge/Open_source-Free-blue"> <img alt="Static Badge" src="https://img.shields.io/badge/MIT-License-%23080"> <img alt="Static Badge" src="https://img.shields.io/badge/yu--Original-%23ffd700"> 
+----
+<img src="https://github.com/user-attachments/assets/9f95e69e-334a-4705-a8fe-4a18ebf6db45">
 
-# 概要
-BlitZlogは、PHPで作ったブログで、<br>
-ダウンロードして利用するような方式です。<br>
-*WordPressみたい*とか言われるかもしれませんが、これは**学習の一環**でもあるので...
-
-## 注意
-かならず、Releasesからご使用ください。<br>
-上にあるファイルやフォルダはv0.1.0-betaのものですのでご了承ください。
-また完成途中なのもあり、いつv1.0をリリースできるのか**不明**です。
-
-## 完成度リスト
-- [ ] 閲覧部分 (約80%完了)
-  - [x] 記事
-    - [ ] コメント
-  - [x] カテゴリ
-  - [x] 検索
-  - [x] ホーム
-- [ ] 管理画面 (約5%完了)
-  - [x] ホーム
-  - [ ] 記事
-    - [x] 一覧
-    - [ ] 作成
-    - [ ] 編集
-    - [ ] 削除
-  - [ ] カテゴリ
-    - [ ] 一覧
-    - [ ] 作成
-    - [ ] 編集
-    - [ ] 削除
-  - [ ] コメント
-    - [ ] 一覧
-    - [ ] 削除
-  - [ ] ファイル
-    - [ ] 一覧
-    - [ ] アップロード
-    - [ ] 削除
-  - [ ] ゴミ箱
-    - [ ] 一覧
-    - [ ] 戻す
-    - [ ] 完全削除
-  - [ ] 情報
-  - [ ] 設定
+# BlitZlog
+軽量CMSである**BlitZlog**の開発リポジトリです。
