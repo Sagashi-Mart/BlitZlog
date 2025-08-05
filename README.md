@@ -37,8 +37,7 @@ BlitZlogはHTMLのベースであり、CSSによるカスタマイズが可能�
 ## バグ報告、ご要望、質問等
 
 - [GitHub Issues](https://github.com/Sagashi-Mart/BlitZlog/issues/new)
-- [公式Discord](https://discord.gg/gzNSyPTVmq)
-- [公式メール](mailto:sagashi0120@gmail.com)
+- [公式Discord](https://discord.gg/F3FHYF2USY)
 
 ## 開発を始める：
 
